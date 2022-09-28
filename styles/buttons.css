@@ -1,0 +1,106 @@
+.btnPrimary-default {
+    height: 32px;
+    width: 100%;
+    max-width: 55px;
+    border-radius: var(--radius-1);
+    background-color: var(--color-brand-1);
+    color: var(--color-mode);
+    border: transparent;
+}
+
+.btnPrimary-default:hover {
+    background-color: var(--color-brand-2);
+}
+
+.btnGrey-default {
+    height: 32px;
+    width: 55px;
+    border-radius: var(--radius-1);
+    border: none;
+    background-color: var(--color-grey-5);
+    color: var(--color-grey-2);
+}
+
+.btnGrey-default:hover {
+    background-color: var(--color-grey-4);
+    color: var(--color-grey-1);
+}
+
+.btnOutline-default {
+    background-color: var(--color-white-fixed);
+    color: var(--color-grey-2);
+    height: 32px;
+    width: 100%;
+    max-width: 70px;
+    border: 2px solid var(--color-grey-5);
+    border-radius: var(--radius-1);
+}
+
+.btnOutline-default:hover {
+    background-color: var(--color-brand-3);
+    color: var(--color-brand-1);
+    border: 2px solid var(--color-brand-1);
+}
+
+.btnOutline-actived {
+    background-color: var(--color-brand-3);
+    color: var(--color-brand-1);
+    height: 32px;
+    width: 70px;
+    border-radius: var(--radius-1);
+    border: 2px solid var(--color-brand-1);
+}
+
+.btn-exit {
+    height: 26px;
+    width: 68px;
+    border-radius: var(--radius-2);
+    padding: 7px 14px;
+
+}
+.btn-entry {
+    height: 26px;
+    width: 68px;
+    border-radius: var(--radius-2);
+    padding: 7px 14px;
+}
+
+.btn-registerValue-mobile {
+    height: 32px;
+    width: 343px;
+    border-radius: var(--radius-1);
+    padding: 0px 14px;
+    background-color: var(--color-brand-1);
+    color: var(--color-mode);
+    width: 100%;
+    border: transparent;
+}
+
+.btn-registerValue-desktop {
+    height: 32px;
+    width: 164px;
+    border-radius: var(--radius-1);
+    padding: 0px 14px;
+    background-color: var(--color-brand-1);
+    color: var(--color-mode);    
+}
+
+.btn-filterAll {
+    height: 17px;
+    width: 42px;
+    background-color: var(--color-mode);
+}
+
+.btn-closeModal {
+    height: 25px;
+    width: 25px;
+    border-radius: var(--radius-2);
+    background-color: var(--color-grey-5); 
+    border: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+

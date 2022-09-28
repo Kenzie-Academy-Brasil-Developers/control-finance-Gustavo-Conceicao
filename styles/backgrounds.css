@@ -1,0 +1,44 @@
+.bgcolor-primary {
+    background-color: var(---brand-1)
+ }
+ 
+ .bgcolor-secundary {
+    background-color: var(---brand-2);
+ }
+ 
+ .bgcolor-third {
+    background-color : var(--color-brand-3);
+ }
+ 
+ .bgcolor-grey-1 {
+    background-color: var(--color-grey-1);
+ }
+ 
+ .bgcolor-grey-2{
+    background-color: var(--color-grey-2);}
+ 
+ .bgcolor-grey-3 {
+    background-color: var(--color-grey-3);}
+ 
+ .bgcolor-grey-4 {
+    background-color: var(--color-grey-4);}
+ 
+ .bgcolor-grey-5 {
+    background-color: var(--color-grey-5);}
+ 
+ 
+ .bgcolor-grey-5 {
+    background-color: var(--color-grey-5);
+ }
+ 
+ .bgcolor-grey-opacity {
+    background-color: var(--color-grey-1-opacity-5);
+ }
+ 
+ .bgcolor-white-fixed {
+    background-color: var(--color-white-fixed);
+ }
+ 
+ .bgcolor-mode {
+    background-color: var(--color-mode);
+ }
