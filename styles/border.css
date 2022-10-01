@@ -1,3 +1,7 @@
 .border-none {
     border: none;
 }
+
+.border-li {
+    border: 1px solid var(--color-grey-4);
+}

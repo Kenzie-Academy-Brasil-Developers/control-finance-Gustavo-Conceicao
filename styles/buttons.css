@@ -51,18 +51,15 @@
     border: 2px solid var(--color-brand-1);
 }
 
-.btn-exit {
+.btn-filterModal {
     height: 26px;
     width: 68px;
-    border-radius: var(--radius-2);
+    border-radius: 4px;
     padding: 7px 14px;
+    background-color: var(--color-grey-4);
+    color: var(--color-grey-2);
+    border: transparent;
 
-}
-.btn-entry {
-    height: 26px;
-    width: 68px;
-    border-radius: var(--radius-2);
-    padding: 7px 14px;
 }
 
 .btn-registerValue-mobile {

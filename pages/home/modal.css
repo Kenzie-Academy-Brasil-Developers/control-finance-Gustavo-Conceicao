@@ -1,16 +1,30 @@
 .section-modal {
-    position: absolute;
-    top: 10%;
-    left: 1.5%;
-    height: 75%;
-    width: 97%;
-    margin: 0 auto;
-    background-color: var(--color-grey-3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    border-radius: var(--radius-1);
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 40px 24px;
+    background-color: var(--color-grey-1-opacity-5);
 }
+
+.divModal {
+    background-color: var(--color-mode);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    align-items: flex-start;
+    gap: 25px;
+    border-radius: var(--radius-1);
+    padding-bottom: 25px;
+}
+
 
 .header-modal {
     height: 25px;
@@ -43,7 +57,8 @@
     border-radius: var(--radius-1);
     padding: 0px 1rem;
     background-color: var(--color-mode);
-    border: none;
+    border: 1px solid var(--color-grey-4);
+
 }
 
 .div-value {
@@ -61,6 +76,11 @@
     padding: 0px 1rem;
     border: 2px solid var(--color-grey-5);
     color: var(--color-grey-2);
+}
+
+.btnTypeValue:hover {
+    border: 2px solid var(--color-brand-1);
+    background-color: var(--color-brand-3)
 }
 
 .div-btn {

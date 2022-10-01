@@ -1,4 +1,23 @@
+.img-trash {
+    height: 20px; 
+    width: 25px;
+    padding: 2px;
+    border: 1px solid var(--color-grey-4);
+    border-radius: 4px;
+}
+
+.figure-img {
+    height: 100%;
+    width: 28.25px;
+    border-radius: 4px;
+    padding: 4px 8px;
+    
+}
+
+
+
 @media (min-width: 1024px){
    
     
 }
+

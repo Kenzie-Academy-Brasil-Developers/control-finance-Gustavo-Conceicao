@@ -7,6 +7,7 @@
     <title>Control Finance</title>
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <meta name="description" content="Control Finance - Seu controle financeiro">
+    <script src="../../pages/home/valuesData.js"></script>
     <link rel="stylesheet" href="/styles/globalStyles.css">
     <link rel="stylesheet" href="../home/index.css">
     <link rel="stylesheet" href="/styles/align-itens.css">
@@ -48,8 +49,8 @@
                 <span class="text2-medium">Soma dos Valores</span>
                 <span class="text2-medium">Valor Total</span>
             </div>
-            <ul>
-                <div class="bgcolor-grey-4 flex direction-column align-center justify-center gap-15 padding-15all radius-8">
+            <ul id="modalInput" class="flex direction-column width-100 gap-20">
+                <div id="hidden" class="bgcolor-grey-4 flex direction-column align-center justify-center gap-15 padding-15all radius-8">
                     <p class="title2-bold">Nenhum valor cadastrado</p>
                     <button id="modalOpen" class="border-none text2-medium cursor-pointer">Registrar novo valor</button>
                 </div>
@@ -58,6 +59,6 @@
     </main>
     <script src="../../scripts/index.js"></script>
     <script src="../../scripts/modal.js"></script>
-    <script src="valuesData.js"></script>
+    <script src="../../scripts/modalLista.js"></script>
 </body>
 </html>

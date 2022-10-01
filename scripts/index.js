@@ -13,21 +13,40 @@ function openModal () {
 }
 openModal()
 
+
+
 function btnActived () {
     const btnFilterAll = document.getElementById("btnFilterAll")
     const btnFilterEntry = document.getElementById("btnFilterEntry")
     const btnFilterExit = document.getElementById("btnFilterExit")
 
     btnFilterAll.addEventListener("click", () => {
-        btnFilterAll.classList.toggle("btnOutline-actived")
-    })
-    btnFilterEntry.addEventListener("click", () => {
-        btnFilterEntry.classList.toggle("btnOutline-actived")
-    })
-    btnFilterExit.addEventListener("click", () => {
-        btnFilterExit.classList.toggle("btnOutline-actived")
-        console.log(btnFilterExit)
+        const btnFilterActived = document.querySelectorAll(".btnOutline-actived")
+        btnFilterActived.forEach(elem => {
+            elem.classList.remove("btnOutline-actived")
+        })
+        btnFilterAll.classList.add("btnOutline-actived")
     })
 
+    btnFilterEntry.addEventListener("click", () => {
+        const btnFilterActived = document.querySelectorAll(".btnOutline-actived")
+        btnFilterActived.forEach(elem => {
+            elem.classList.remove("btnOutline-actived")
+        })
+        btnFilterEntry.classList.add("btnOutline-actived")
+    })
+
+    btnFilterExit.addEventListener("click", () => {
+        const btnFilterActived = document.querySelectorAll(".btnOutline-actived")
+        btnFilterActived.forEach(elem => {
+            elem.classList.remove("btnOutline-actived")
+        })
+        btnFilterExit.classList.add("btnOutline-actived")
+    })
 }
 btnActived()
+
+function createValue () {
+
+}
+
