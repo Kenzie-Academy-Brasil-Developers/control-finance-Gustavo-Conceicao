@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Finance</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Control Finance - Seu controle financeiro">
+    <script src="../../pages/home/valuesData.js"></script>
+    <link rel="stylesheet" href="/styles/globalStyles.css">
+    <link rel="stylesheet" href="../home/index.css">
+    <link rel="stylesheet" href="/styles/align-itens.css">
+    <link rel="stylesheet" href="/styles/backgrounds.css">
+    <link rel="stylesheet" href="/styles/border-radius.css">
+    <link rel="stylesheet" href="/styles/border.css">
+    <link rel="stylesheet" href="/styles/box-sizes.css">
+    <link rel="stylesheet" href="/styles/buttons.css">
+    <link rel="stylesheet" href="/styles/colors.css">
+    <link rel="stylesheet" href="/styles/display.css">
+    <link rel="stylesheet" href="/styles/flex-direction.css">
+    <link rel="stylesheet" href="/styles/gap.css">
+    <link rel="stylesheet" href="/styles/justify.css">
+    <link rel="stylesheet" href="/styles/margin.css">
+    <link rel="stylesheet" href="/styles/padding.css">
+    <link rel="stylesheet" href="/styles/positions.css">
+    <link rel="stylesheet" href="/styles/texts.css">
+    <link rel="stylesheet" href="/styles/width.css">
+    <link rel="stylesheet" href="./pages/home/modal.css">
+</head>
+<body id="modalBody">
+    <header class="bgcolor-grey-5 width-100 header-size margin-bottom-30">
+        <nav class="flex direction-column justify-start gap-20">
+            <h1 class="title1-bold">Control Finance</h1>
+            <button id="openModal" class="btn-registerValue-mobile text1-bold cursor-pointer">Registrar novo valor</button>
+        </nav>
+    </header>
+    <main>
+        <section class="width-90 flex direction-column margin-auto gap-30">
+            <div class="width-100">
+                <h2 class="title2-medium margin-bottom-40">Resumo financeiro</h2>
+                <div class="flex justify-start gap-20 margin-bottom-30 width-100">
+                    <button id="btnFilterAll" class="btnOutline-default cursor-pointer">Todos</button>
+                    <button id="btnFilterEntry" class="btnOutline-default cursor-pointer">Entradas</button>
+                    <button id="btnFilterExit" class="btnOutline-default cursor-pointer">Saídas</button>
+                </div>
+            </div>
+            <div class="flex direction-row bgcolor-grey-4 padding-15all radius-8 justify-between width-100">
+                <span class="text2-medium">Soma dos Valores</span>
+                <span class="text2-medium">Valor Total</span>
+            </div>
+            <ul id="modalInput" class="flex direction-column width-100 gap-20">
+                <div id="hidden" class="bgcolor-grey-4 flex direction-column align-center justify-center gap-15 padding-15all radius-8">
+                    <p class="title2-bold">Nenhum valor cadastrado</p>
+                    <button id="modalOpen" class="border-none text2-medium cursor-pointer">Registrar novo valor</button>
+                </div>
+            </ul>
+        </section>
+    </main>
+    <script src="../../scripts/index.js"></script>
+    <script src="../../scripts/modal.js"></script>
+    <script src="../../scripts/modalLista.js"></script>
+</body>
+</html>
