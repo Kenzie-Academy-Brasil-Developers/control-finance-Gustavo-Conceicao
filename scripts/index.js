@@ -13,8 +13,6 @@ function openModal () {
 }
 openModal()
 
-
-
 function btnActived () {
     const btnFilterAll = document.getElementById("btnFilterAll")
     const btnFilterEntry = document.getElementById("btnFilterEntry")
@@ -45,8 +43,4 @@ function btnActived () {
     })
 }
 btnActived()
-
-function createValue () {
-
-}
 

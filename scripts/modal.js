@@ -65,7 +65,7 @@ function createModal () {
     valueType.innerText = "Tipo de valor"
     btnEntry.innerText = "Entrada"
     btnEntry.addEventListener("click", () => {
-        btnEntry.classList.toggle("btnTypeValue:hover")
+        btnEntry.classList("btnTypeValue:hover")
     })
     btnExit.innerText = "Saída"
     btnExit.addEventListener("click", () => {
