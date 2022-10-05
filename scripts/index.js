@@ -6,10 +6,6 @@ function openModal () {
     openModal.addEventListener("click", () => {
         body.append(createModal())
     })
-
-    modalOpen.addEventListener("click", () => {
-        body.append(createModal())
-    })
 }
 openModal()
 
@@ -18,7 +14,13 @@ function btnActived () {
     const btnFilterEntry = document.getElementById("btnFilterEntry")
     const btnFilterExit = document.getElementById("btnFilterExit")
 
+    const btnAll = document.querySelectorAll(".btnOutline-default cursor-pointer")
+
+    
+    
+
     btnFilterAll.addEventListener("click", () => {
+        createList(insertedValues)
         const btnFilterActived = document.querySelectorAll(".btnOutline-actived")
         btnFilterActived.forEach(elem => {
             elem.classList.remove("btnOutline-actived")
@@ -27,6 +29,14 @@ function btnActived () {
     })
 
     btnFilterEntry.addEventListener("click", () => {
+        const valueFilter = insertedValues.filter(value => {
+            if(value.categoryID === valuesCategory.indexOf(btnFilterEntry.innerText)+1){
+                return true
+            }
+            return false
+        })
+        createList(valueFilter)
+
         const btnFilterActived = document.querySelectorAll(".btnOutline-actived")
         btnFilterActived.forEach(elem => {
             elem.classList.remove("btnOutline-actived")
@@ -35,6 +45,13 @@ function btnActived () {
     })
 
     btnFilterExit.addEventListener("click", () => {
+        const valueFilter = insertedValues.filter(value => {
+            if(value.categoryID === valuesCategory.indexOf(btnFilterExit.innerText)+1){
+                return true
+            }
+            return false
+        })
+        createList(valueFilter)
         const btnFilterActived = document.querySelectorAll(".btnOutline-actived")
         btnFilterActived.forEach(elem => {
             elem.classList.remove("btnOutline-actived")
@@ -43,4 +60,6 @@ function btnActived () {
     })
 }
 btnActived()
+
+
 

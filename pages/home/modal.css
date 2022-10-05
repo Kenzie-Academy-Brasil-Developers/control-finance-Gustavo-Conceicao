@@ -62,7 +62,7 @@
 }
 
 .div-value {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -84,7 +84,7 @@
 }
 
 .div-btn {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;

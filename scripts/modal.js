@@ -43,17 +43,24 @@ function createModal () {
     btnSubmit.classList    = "btnSubmit-modal cursor-pointer" 
     btnSubmit.type = "submit"
 
-    // formInput.addEventListener("submit", (event)=> {
-    //     event.preventDefault();
-    //     let newValue = {};
+    let newValue = {};
+    formInput.addEventListener("submit", (event)=> {
+        event.preventDefault();
+        const id = insertedValues[insertedValues.length-1].id+1
+        newValue.id = id
+        const formSubmit = [...event.target];
+        formSubmit.forEach(elemento => {
+            if(elemento.value && elemento.type != "radio"){
+                newValue[elemento.name] =  Number(elemento.value)
+            }else if(elemento.checked){
+                newValue[elemento.name] =  Number(elemento.value)
+            }
+        })
+        insertedValues.push(newValue);
+        console.log(insertedValues)
+        createList(insertedValues)
         
-    //     const formSubmit = [...event.target];
-        
-    //     if(elem.value && elem.type){
-    //         newValue[elem.value] =  elem.value
-    //     }
-    // })
-    // insertedValues.push(newValue);
+    })
 
     titleModal.innerText = "Registro de valor"
     closeModal.innerText = "X"
@@ -64,32 +71,30 @@ function createModal () {
         
     valueType.innerText = "Tipo de valor"
     btnEntry.innerText = "Entrada"
+    btnEntry.type = "button"
     btnEntry.addEventListener("click", () => {
-        btnEntry.classList("btnTypeValue:hover")
+        newValue.categoryID = 1
+        btnEntry.classList.add("btnTypeValue:hover")
     })
     btnExit.innerText = "Saída"
+    btnExit.type = "button"
     btnExit.addEventListener("click", () => {
+        newValue.categoryID = 2
         btnExit.classList.toggle("btnTypeValue:hover")
     })
     btnCancel.innerText = "Cancelar"
+    btnCancel.type = "button"
     btnCancel.addEventListener("click", () => {
         sectionModal.remove()
     })
     btnSubmit.innerText = "Inserir valor"
-    btnSubmit.addEventListener("click", () => {
-        const ul = document.getElementById("modalInput")
-        const listInput = createList(valuesCategory)
-        const hidden = document.getElementById("hidden")
-        hidden.remove()
-        ul.append(listInput)
-    })
     
     divBtn.append(btnCancel,btnSubmit)
     divValue.append(valueType,btnEntry,btnExit) 
-    formInput.append(labelModal,inputModal)
+    formInput.append(labelModal,inputModal,divValue,divBtn)
     divRead.append(helpText) 
     headerModal.append(titleModal,closeModal)
-    divModal.append(headerModal,divRead,formInput,divValue,divBtn)
+    divModal.append(headerModal,divRead,formInput)
     sectionModal.append(divModal)
         
     return sectionModal
