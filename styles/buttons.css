@@ -55,10 +55,10 @@
     height: 26px;
     width: 68px;
     border-radius: 4px;
-    padding: 7px 14px;
     background-color: var(--color-grey-4);
     color: var(--color-grey-2);
     border: transparent;
+    text-align: center;
 
 }
 

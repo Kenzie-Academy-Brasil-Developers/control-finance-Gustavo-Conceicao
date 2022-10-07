@@ -46,6 +46,7 @@ function createModal () {
     let newValue = {};
     formInput.addEventListener("submit", (event)=> {
         event.preventDefault();
+        console.log(event)
         const id = insertedValues[insertedValues.length-1].id+1
         newValue.id = id
         const formSubmit = [...event.target];
@@ -57,9 +58,8 @@ function createModal () {
             }
         })
         insertedValues.push(newValue);
-        console.log(insertedValues)
         createList(insertedValues)
-        
+        sectionModal.remove()  
     })
 
     titleModal.innerText = "Registro de valor"
@@ -74,7 +74,7 @@ function createModal () {
     btnEntry.type = "button"
     btnEntry.addEventListener("click", () => {
         newValue.categoryID = 1
-        btnEntry.classList.add("btnTypeValue:hover")
+        
     })
     btnExit.innerText = "Saída"
     btnExit.type = "button"
@@ -88,6 +88,7 @@ function createModal () {
         sectionModal.remove()
     })
     btnSubmit.innerText = "Inserir valor"
+
     
     divBtn.append(btnCancel,btnSubmit)
     divValue.append(valueType,btnEntry,btnExit) 

@@ -1,6 +1,7 @@
-function createList (data, valuesCategory) {
+function createList (data) {
     const ul = document.getElementById("modalInput")
     ul.innerHTML = ""
+    somarValores(data)
     if (data.length === 0){
         const divVazia = `<div id="hidden" class="bgcolor-grey-4 flex direction-column align-center justify-center gap-15 padding-15all radius-8">
         <p class="title2-bold">Nenhum valor cadastrado</p>
@@ -8,7 +9,7 @@ function createList (data, valuesCategory) {
     </div>`
     ul.insertAdjacentHTML("afterbegin", divVazia)
     }else{
-        data.forEach(elem => {
+        data.forEach((elem,dataIndex) => {
             const li = document.createElement("li")
             const price = document.createElement("span")
             const div = document.createElement("div")
@@ -31,6 +32,17 @@ function createList (data, valuesCategory) {
             }
             
             img.src = "../../assets/trash.png"
+            img.id = "imgId"
+            img.addEventListener("click", (event)=>{
+              const index = insertedValues.findIndex((elemento)=>{
+                return elemento.id === elem.id
+                
+              })
+              event.preventDefault()
+              insertedValues.splice(index, 1)
+              data.splice(dataIndex,1)
+              createList (data)
+            })
             
             figure.append(img)
             div.append(filter,figure)

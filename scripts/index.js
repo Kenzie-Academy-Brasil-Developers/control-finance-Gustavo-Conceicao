@@ -14,11 +14,7 @@ function btnActived () {
     const btnFilterEntry = document.getElementById("btnFilterEntry")
     const btnFilterExit = document.getElementById("btnFilterExit")
 
-    const btnAll = document.querySelectorAll(".btnOutline-default cursor-pointer")
-
     
-    
-
     btnFilterAll.addEventListener("click", () => {
         createList(insertedValues)
         const btnFilterActived = document.querySelectorAll(".btnOutline-actived")
@@ -60,6 +56,20 @@ function btnActived () {
     })
 }
 btnActived()
+
+function somarValores (array) {
+    const renderReduce = document.getElementById("reduce")
+    const soma = array.reduce((acumulador, valorAtual) => {
+        if(valorAtual.categoryID === 1){
+            return acumulador + valorAtual.value
+        }else{
+            return acumulador - valorAtual.value
+        }
+    },0)
+    renderReduce.innerText = soma.toLocaleString("pt-br", { style: "currency", currency: "BRL", })
+}
+
+
 
 
 
